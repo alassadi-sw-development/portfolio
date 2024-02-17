@@ -1,0 +1,176 @@
+body {
+  background-color: lemonchiffon;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 3rem auto;
+  color: rgb(67, 95, 71);
+  max-width: 95rem;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+header>img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  text-align: center;
+  border-bottom: 1px solid darkgreen;
+  border-top: 1px solid darkgreen;
+  padding: 10px 0;
+  margin: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(67, 95, 71);
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: darkgreen;
+  color: #fff;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.sp {
+  position: relative;
+  z-index: 10;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+.heading1 {
+  position: relative;
+  background-image: url('https://i.ibb.co/pyw0DLs/food.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  text-shadow: 2px 2px 4px rgba(248, 255, 38, 0.907);
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+article {
+  flex: 1;
+  border: 1px solid darkgreen;
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px;
+  background-color: lemonchiffon;
+  box-sizing: border-box;
+  box-shadow: 2 2 10px rgba(0, 0, 0, 0.1);
+}
+
+article a {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  color: rgb(67, 95, 71);
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+  border: 1px solid rgb(67, 95, 71);
+}
+
+
+
+article:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease-in-out;
+  text-decoration: underline;
+}
+
+article a:hover {
+  background-color: darkgreen;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 100px;
+}
+
+footer p {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+footer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+footer img:hover {
+  transform: rotate(360deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+div {
+  flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 2rem 2%;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav li {
+    padding: 0.5rem;
+  }
+
+  article {
+    flex: 1 100%;
+  }
+}
