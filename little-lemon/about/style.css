@@ -1,0 +1,90 @@
+@import url('../universal.css');
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+section ul {
+  display: flex;
+  list-style-type: none;
+  padding: 3rem 3rem 0 3rem;
+  margin-bottom: 0;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+section>ul>li>a {
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  background-color: #789578;
+  color:#CECECE;
+  text-decoration: none;
+  padding: 0 1rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
+section > div {
+  padding: 1rem;
+  background-color: #006400;
+  border-radius: 1rem;
+  transition: opacity 300ms linear;
+  width: 80%;
+  margin: 0 auto;
+}
+
+section div img {
+  width: 80%;
+  display: block; 
+  margin: auto;
+  padding-bottom: 1rem ;
+}
+
+section > div > p {
+	line-height: 1.5em;
+	margin-bottom: 1em;
+  color: #F7F7F7;
+  font-weight: bold;
+}
+
+h2 {
+  color: #F7F7F7;
+  font-weight: 900;
+}
+
+.open-time {
+  text-align: center;
+  color: #F7F7F7 ;
+  margin-bottom: 00.5rem;
+}
+
+section .active {
+  background-color: #006400;
+  color: #F7F7F7;
+}
+
+section .hidden {display: none;}
+section .visible {display: block;}
+section .visuallyhidden {opacity: 0;}
+
+.res-tab {
+  display: block;
+  width: 11rem;
+  padding: 10px 20px;
+  background-color: #21aa21;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 1px 1px 5px black;
+  margin: 1rem auto;
+  font-weight: bold;
+  text-align: center;
+}
+
+.res-tab:hover {
+  background-color: #004d00;
+  color: #ffe600;
+}
