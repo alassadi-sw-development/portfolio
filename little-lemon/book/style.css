@@ -1,0 +1,244 @@
+@import url('../universal.css');
+
+.Layout{
+  margin: 0 auto;
+  display: flex;
+  width: 40rem;
+  height: 15rem;
+  border: black solid thin;
+  background-image: url(images/parkett.webp);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#seating {
+	overflow: hidden;
+	margin: 2rem auto;
+  text-align: center;
+}
+
+#seating section {
+  flex-wrap: wrap;
+}
+
+#seating section div {
+  margin-top: 0.625rem;
+  margin-right: 0.625rem; 
+  width: 4.375rem;
+  height: 4.375rem;
+  line-height: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.75rem;
+  border-radius: 50%;
+  background-image: url(images/standard1.png);
+  background-size: cover;
+  z-index: 10;
+}
+
+#ab-rows {
+  display: flex;
+	width: 33rem;
+  height:9rem;
+}
+
+.door-bar{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100%;
+}
+
+#door{
+  border: black solid thin;
+  width: 3rem;
+  height: 6rem;
+  margin-top: -1.2rem;
+  background-image: url(images/door.png);
+  background-size: cover;
+}
+#Kit{
+  margin: 0;
+  border: black solid thin;
+  width: 6.5rem;
+  height: 10rem;
+  background-image: url(images/kitchen.jpeg);
+  background-size: cover;
+}
+#bar{
+  border: black solid thin;
+  width: 25rem;
+  height: 3rem;
+  background-image: url(images/drinks.webp);
+  background-size: cover;
+}
+
+.a:hover, .s:hover {
+	cursor: pointer;
+}
+
+#seating section .a:hover {
+	background-image: url(images/hover.png);
+  color: yellow;
+}
+
+#seating section .s {
+  background-image: url(images/ready.png);
+  color: rgb(172, 63, 172);
+}
+
+#seating section .r {
+  background-image: url(images/booked.png);
+  color: red;
+
+}
+
+#seating .label {
+border: none;
+	text-transform: uppercase;
+  background-image: none;
+  line-height: 3.5;
+}
+
+
+
+#reserve {
+  display: inline-block;
+  padding-top: 1rem; /* Adjust padding to your preference */
+  padding-bottom: 1rem; /* Adjust padding to your preference */
+  text-decoration: none;
+  background-color: #4caf50; /* Button color */
+  color: white; /* Text color */
+  border: 2px solid #4caf50; /* Border color */
+  border-radius: 0px 0px 10px 10px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 14px; /* Adjust font size to your preference */
+  margin:0; /* Center the button under other divs */
+  width: 40rem;
+  text-align: center;
+
+}
+
+#reserve:hover {
+  background-color: #45a049; /* Change color on hover */
+  border-color: #45a049; /* Change border color on hover */
+}
+
+#resform {
+	display: none;
+  width: 36rem;
+	height: 25rem;
+	padding: 2rem;
+	background:#bcccb3;
+	border: 2px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px black;
+  margin: 0rem auto;
+  z-index: 10;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#resform h2, p {
+	text-align: center;
+}
+
+#confirmres {
+	text-align: center;
+}
+
+#confirmres input{
+  width: 30rem;
+}
+#confirmres label{
+  display: inline;
+}
+
+input, label {
+	display: block;
+	width: 20vw;
+	margin: auto;
+}
+
+input {
+	padding: 5px;
+	margin-bottom: 20px;
+}
+
+label {
+	margin-bottom: 5px;
+}
+
+#confirmbtn {
+  display: inline-block;
+  padding: 6px 14px 6px;
+  margin-bottom: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #45a049;
+}
+
+@media only screen and (max-width: 835px) {
+  
+  #seating {
+    overflow: hidden;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .Layout{
+    width: 15rem;
+    height: 40rem;
+    justify-content: end;
+    flex-direction: column;
+  }
+
+  #reserve{
+    width: 15rem;
+  }
+
+  #ab-rows{
+    width: 9rem;
+    height: 33rem;
+    flex-direction: column;
+  }
+  #Kit{
+    width: 10rem;
+    height: 6.5rem;
+  }
+  .door-bar{
+    align-items: flex-end;
+    flex-direction: column;
+    height: 100%;
+    width: 5rem;
+  }
+
+  #door{
+    width: 6rem;
+    height: 3rem;
+    background-image: url(images/door-rot.png);
+  }
+  #bar{
+    width: 3rem;
+    height: 25rem;
+    background-image: url(images/drinks-rot.png);
+  }
+  #resform {
+    width: 18rem;
+    height: 25rem;
+    top: 50%;
+  }
+  #confirmres input{
+    width: 10rem;
+  }
+}
