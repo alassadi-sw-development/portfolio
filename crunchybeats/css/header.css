@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 80vw;
+  margin: 0 auto;
+  background: linear-gradient(45deg, #000000, #4c4c4c);
+}
+
+h1 {
+  text-align: center;
+  color: hsla(291, 98%, 56%, 0.527);
+  text-shadow: 2px 2px 5px hsla(291, 98%, 56%, 0.527);
+  font-size: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+}
+
+#navigation_bar_wrapper {
+  width: 80vw;
+  height: 4rem;
+  margin: 0 auto;  
+  position: fixed;
+}
+
+#navigation_bar {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+}
+
+#navigation_bar li {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  background: linear-gradient(-45deg, hsla(291, 98%, 56%, 0.527), rgba(231, 190, 231, 0.527));
+}
+
+#navigation_bar li a {
+  display: block;
+  height: 100%;
+  line-height: 3.7rem;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 0px 5px black;
+  font-size: 1.8rem;
+  border: 5px ridge violet;
+  transition: all 0.3s ease;
+}
+
+#navigation_bar li a:hover {
+  border-color: #fff;
+  background-color: hsla(291, 98%, 56%, 0.527);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+}
+
+#navigation_bar li a:active {
+  background-color: rgba(231, 190, 231, 0.527);
+}
+
+#tango_dance_img {
+  width: 80vw;
+}
