@@ -585,26 +585,26 @@ span {
 }
 
 #event1{
-  background-image: url("../images/Cover_event1.jpg");
+  background-image: url("/../images/Cover_event1.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 #event2{
-  background-image: url("../images/Cover_event2.jpg");
+  background-image: url("/../images/Cover_event2.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
 }
 #event3{
-  background-image: url("../images/Cover_event3.jpg");
+  background-image: url("/../images/Cover_event3.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
 }
 #event4{
-  background-image: url("../images/Cover_event4.jpg");
+  background-image: url("/../images/Cover_event4.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
