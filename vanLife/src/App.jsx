@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Vans from './pages/Vans/Vans'
-
 import "./server"
 import VanDetails from './pages/Vans/VanDetail'
 import Layout from './components/Layout'
@@ -15,6 +14,8 @@ import HostVanDetails from './pages/Host/HostVanDetail'
 import HostVanInfo from './pages/Host/HostVanInfo'
 import HostVanPricing from './pages/Host/HostVanPricing'
 import HostVanPhotos from './pages/Host/HostVanPhotos'
+import NotFoundPage from './pages/NotFoundPage'
+import Login from './login'
 
 function App() {
 
@@ -26,7 +27,11 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetails />} />
-          
+          <Route
+            path="login"
+            element={<Login />}
+          />
+
           <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
@@ -38,6 +43,7 @@ function App() {
             </Route>
             <Route path="reviews" element={<Reviews />} />
           </Route>
+          <Route path="*" element={<NotFoundPage/>} />
         </Route>
       </Routes>
     </BrowserRouter>
