@@ -8,7 +8,11 @@ export default function Header() {
         textDecoration: "underline",
         color: "#161616"
     }
-    
+
+    function logOut() {
+        localStorage.removeItem("loggedin")
+    }
+
     return (
         <header>
             <Link className="site-logo" to="/">#VanLife</Link>
@@ -37,6 +41,7 @@ export default function Header() {
                         className="login-icon"
                     />
                 </Link>
+                <button onClick={logOut}>Log Out</button>
             </nav>
         </header>
     )
