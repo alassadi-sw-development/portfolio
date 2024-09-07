@@ -740,3 +740,8 @@ img.graph {
   color: #ff8c38;
   margin-right: 5px;
 }
+
+.log-out {
+  border-radius: 15px;
+  background-color: #ffcc8d;
+}

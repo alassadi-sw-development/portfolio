@@ -4,10 +4,11 @@ import Header from './Header';
 import { Outlet } from 'react-router-dom';
 import Footer from './Footer';
 
-function Layout(props) {
+function Layout({isLoggedIn, handleLogOutStatus}) {
+  
   return (
     <div className="site-wrapper">
-      <Header />
+      <Header isLoggedIn={isLoggedIn} handleLogOutStatus={handleLogOutStatus} />
       <main>
           <Outlet />
       </main>

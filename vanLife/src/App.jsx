@@ -17,21 +17,30 @@ import HostVanPhotos from './pages/Host/HostVanPhotos'
 import NotFoundPage from './pages/NotFoundPage'
 import Login from './login'
 import AuthenticationRequired from './AuthenticationRequired'
+import { useState } from 'react'
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    return localStorage.getItem('loggedin') === 'true';
+  });
+
+  function handleLogInStatus() {
+    setIsLoggedIn(true);
+  }
+
+  function handleLogOutStatus() {
+    setIsLoggedIn(false);
+  }
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout isLoggedIn={isLoggedIn} handleLogOutStatus={handleLogOutStatus} />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
-          <Route
-            path="login"
-            element={<Login />}
-          />
+          <Route path="login" element={<Login isLoggedIn={isLoggedIn} handleLogInStatus={handleLogInStatus} />} />
 
           <Route element={<AuthenticationRequired />}>
             <Route path="host" element={<HostLayout />}>
@@ -51,7 +60,7 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

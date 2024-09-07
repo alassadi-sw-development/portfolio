@@ -1,47 +1,52 @@
 import React from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link, Navigate, NavLink, useNavigate } from "react-router-dom"
 import avatarIcon from "../assets/images/avatar-icon.png"
 
-export default function Header() {
+export default function Header({isLoggedIn, handleLogOutStatus}) {
     const activeStyles = {
         fontWeight: "bold",
         textDecoration: "underline",
         color: "#161616"
     }
 
+    const navigate = useNavigate()
+
     function logOut() {
+        handleLogOutStatus()
         localStorage.removeItem("loggedin")
+        navigate("/")
     }
+    console.log(isLoggedIn);
 
     return (
         <header>
             <Link className="site-logo" to="/">#VanLife</Link>
             <nav>
-                <NavLink 
+                <NavLink
                     to="/host"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
                     Host
                 </NavLink>
-                <NavLink 
+                <NavLink
                     to="/about"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
                     About
                 </NavLink>
-                <NavLink 
+                <NavLink
                     to="/vans"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
                     Vans
                 </NavLink>
-                <Link to="login" className="login-link">
+                {!isLoggedIn ? <Link to="login" className="login-link">
                     <img 
                         src={avatarIcon} 
                         className="login-icon"
                     />
-                </Link>
-                <button onClick={logOut}>Log Out</button>
+                </Link> :
+                <button className="log-out" onClick={logOut}>Log Out</button>}
             </nav>
         </header>
     )
