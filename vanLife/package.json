@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "homepage": "https://alassadi-sw-development.github.io/portfolio/"
+    "preview": "vite preview"
   },
   "dependencies": {
     "firebase": "^10.13.1",
